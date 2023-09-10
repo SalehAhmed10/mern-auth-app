@@ -2,7 +2,8 @@ import connectMongoDB from "@/lib/mongodb";
 import User from "@/models/user";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
-import bcrypt from "bcryptjs";
+// import bcrypt from "bcryptjs";
+const bcrypt = require("bcryptjs");
 
 export const authOptions = {
   providers: [
