@@ -1,7 +1,8 @@
 import connectMongoDB from "../../../lib/mongodb";
 import User from "@/models/user";
 import { NextResponse } from "next/server";
-import bcrypt from "bcryptjs";
+// import bcrypt from "bcryptjs";
+const bcrypt = require("bcryptjs");
 
 // interface RegisterRequest {
 //   json: () => Promise<{
