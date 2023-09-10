@@ -3,15 +3,15 @@ import User from "@/models/user";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
-interface RegisterRequest {
-  json: () => Promise<{
-    name: string;
-    email: string;
-    password: string;
-  }>;
-}
+// interface RegisterRequest {
+//   json: () => Promise<{
+//     name: string;
+//     email: string;
+//     password: string;
+//   }>;
+// }
 
-export async function POST(req: RegisterRequest) {
+export async function POST(req: any) {
   try {
     const { name, email, password } = await req.json();
     const hashedPassword = await bcrypt.hash(password, 10);
